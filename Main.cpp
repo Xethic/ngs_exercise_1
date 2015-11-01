@@ -11,6 +11,15 @@
 
 using namespace std;
 
+/*
+ * Converts Illumina 1.8+ coded input-data by extracting quality values and transformation into Phred quality scores.
+ * The first argument is the input file usually given as .fastq file.
+ * The second argument is optional and defines the name and type of the output file.
+ * If omitted out.txt will be used.
+ * This source code ensures compatibility with the C++98 standard and above.
+ * If the first or third line of the input-file does not fulfill the Illumina 1.8+ standard beginning characters the program quits with an useful error-report.
+ * Every fourth line gets converted into Phred quality scores.
+ */
 int main(int argc, char* argv[]){
     ifstream fastq(argv[1]);
     const char* outfile = argv[2];

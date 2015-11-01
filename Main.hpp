@@ -6,6 +6,10 @@
 //
 //
 
+/*
+ * Header of file Main.cpp including all required system libraries and the implementation called 'converter'.
+ */
+
 #ifndef Main_hpp
 #define Main_hpp
 

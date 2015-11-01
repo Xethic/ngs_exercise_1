@@ -10,6 +10,11 @@
 
 using namespace std;
 
+/*
+ *  Converts a line of input quality values given as string into Phred quality scores.
+ *  Because Illumina's quality values are defined as Phred+33, it substracts 33 on every parsed ascii value.
+ *  If there's an empty line given an empty string will be returned.
+ */
 string convertFromSangerToPhred(string input){
     if(input == ""){
         cout << "Read empty-line. Please check your input file.\n";

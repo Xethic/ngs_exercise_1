@@ -6,6 +6,10 @@
 //
 //
 
+/*
+ * Header of file converter.cpp including all required system libraries.
+ */
+
 #ifndef converter_hpp
 #define converter_hpp
 
