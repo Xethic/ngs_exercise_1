@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
             outfile = "out.txt";
         }
         ofstream output;
-        output.open(outfile);
+        output.open(outfile, ofstream::out);
         string line;
         int counter = 0;
         while ( getline (fastq,line) ){
