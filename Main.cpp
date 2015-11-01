@@ -11,13 +11,14 @@
 
 using namespace std;
 
-int main(int argc, char *argv[]){
+int main(int argc, char* argv[]){
     ifstream fastq(argv[1]);
-    string outfile = argv[2];
+    const char* outfile = argv[2];
     
     if (fastq.is_open()){
-        if(outfile == ""){
-            outfile = "out.txt";
+        if(outfile == NULL){
+            string def = "out.txt";
+            outfile = def.c_str();
         }
         ofstream output;
         output.open(outfile, ofstream::out);
